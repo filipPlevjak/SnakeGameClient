@@ -64,17 +64,17 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/klient.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/klient ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/CMemLeak.o: CMemLeak.c
+${OBJECTDIR}/CMemLeak.o: CMemLeak.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CMemLeak.o CMemLeak.c
 
-${OBJECTDIR}/mainC.o: mainC.c
+${OBJECTDIR}/mainC.o: mainC.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/mainC.o mainC.c
 
-${OBJECTDIR}/vlakna.o: vlakna.c
+${OBJECTDIR}/vlakna.o: vlakna.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/vlakna.o vlakna.c
@@ -85,6 +85,7 @@ ${OBJECTDIR}/vlakna.o: vlakna.c
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
+	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/klient.exe
 
 # Subprojects
 .clean-subprojects:
